@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice Notes Daily Planner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>🎙️ Voice Notes Daily Planner</h1>
+        <p>Speak your tasks, auto-prioritize them, and sync to Google Calendar.</p>
+      </header>
+
+      <section class="card controls">
+        <button id="recordBtn">Start Recording</button>
+        <button id="stopBtn" disabled>Stop</button>
+        <button id="connectGoogleBtn">Connect Google Calendar</button>
+      </section>
+
+      <section class="card transcript-area">
+        <h2>Transcript</h2>
+        <textarea id="transcript" placeholder="Your spoken notes will appear here..."></textarea>
+        <div class="row">
+          <button id="extractBtn">Extract Tasks</button>
+          <button id="clearBtn" class="ghost">Clear</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Today’s Prioritized Tasks</h2>
+        <ul id="taskList" class="task-list"></ul>
+      </section>
+    </main>
+
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="app.js"></script>
+  </body>
+</html>

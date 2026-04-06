@@ -1,0 +1,125 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #22c55e;
+  --high: #ef4444;
+  --medium: #f59e0b;
+  --low: #3b82f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(120deg, #0f172a, #1e293b);
+  color: var(--text);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: var(--muted);
+}
+
+.card {
+  background: rgba(17, 24, 39, 0.95);
+  border: 1px solid #374151;
+  border-radius: 16px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.controls,
+.row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  color: #0b1220;
+  background: var(--accent);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+button.ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid #4b5563;
+}
+
+textarea {
+  width: 100%;
+  min-height: 120px;
+  margin: 0.5rem 0 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #374151;
+  background: #0b1220;
+  color: var(--text);
+  padding: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid #374151;
+  padding: 0.7rem 0;
+}
+
+.priority {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.priority.high {
+  background: color-mix(in oklab, var(--high) 25%, transparent);
+  color: #fecaca;
+}
+
+.priority.medium {
+  background: color-mix(in oklab, var(--medium) 25%, transparent);
+  color: #fde68a;
+}
+
+.priority.low {
+  background: color-mix(in oklab, var(--low) 25%, transparent);
+  color: #bfdbfe;
+}
+
+.task-actions button {
+  padding: 0.4rem 0.6rem;
+  font-size: 0.8rem;
+}
